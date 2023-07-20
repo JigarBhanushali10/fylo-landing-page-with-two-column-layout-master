@@ -1,0 +1,332 @@
+:root {
+  --body-bg: hsl(240, 80%, 98%);
+  --body-color: hsl(243, 87%, 12%);
+  --btn-primary: hsl(224, 93%, 58%);
+  --footer-bg: var(--body-color);
+  --border-radius: 4px;
+  --place-holder-color: hsl(0, 0%, 75%);
+  --body-font-size: 1rem;
+  --brand-link-color: hsl(170, 45%, 43%);
+}
+
+/* global css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: var(--body-font-size);
+  color: var(--body-color);
+  font-family: "Open Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+/* helpers classes */
+.d-flex {
+  display: flex;
+}
+.d-block {
+  display: block;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+.flex-shrink-1 {
+  flex-shrink: 1;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+input[type="text"],
+input[type="email"] {
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+}
+::placeholder {
+  color: var(--place-holder-color);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--place-holder-color);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--place-holder-color);
+}
+
+.btn {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: var(--body-bg);
+  background-color: var(--btn-primary);
+  border-radius: var(--border-radius);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0%),
+    3px 3px 4px 0px rgb(0 0 0 / 13%);
+  border: none;
+  padding: 0.75rem 1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+header {
+  font-family: "Raleway", sans-serif;
+  margin: 2rem 0;
+  & li {
+    white-space: nowrap;
+    padding: 0 0.5rem;
+  }
+  .brand-logo {
+    height: 30px;
+  }
+}
+
+.hero-section {
+  margin: 2rem 0;
+  padding: 2rem 0;
+  .hero-img {
+    margin-bottom: 3rem;
+  }
+  .hero-title {
+    margin-bottom: 2rem;
+  }
+  .hero-details {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .hero-form {
+    display: flex;
+    flex-direction: column;
+    .hero-email-input {
+      border: 1px solid var(--body-color);
+      margin-bottom: 1rem;
+      outline: none;
+    }
+  }
+}
+
+.productive-section {
+  padding: 2rem 0;
+  /* margin: 2rem 0; */
+  background-image: url("../images/bg-curve-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  & h4 {
+    margin: 2rem 0;
+  }
+  & p {
+    margin: 1rem 0;
+  }
+
+  .productive-img-container {
+    padding: 2rem 0;
+  }
+
+  .flyo-link {
+    margin: 2rem 0;
+    padding-bottom: 0.5rem;
+    color: var(--brand-link-color);
+    border-bottom: 1px solid var(--brand-link-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon-arrow {
+      margin-left: 0.5rem;
+      height: 20px;
+    }
+  }
+}
+.card {
+  font-size: calc(var(--body-font-size) - 4px);
+  width: 85%;
+  margin: 2rem auto;
+  background-color: white;
+  box-shadow: 3px 3px 9px 2px rgba(0, 0, 0, 0.068);
+  border-radius: var(--border-radius);
+  padding: 2rem 3rem;
+
+  & .card-footer {
+    & img {
+      height: 30px;
+      margin-right: 0.5rem;
+      border-radius: 100%;
+    }
+  }
+}
+.contact-us {
+  background-color: hsl(238, 22%, 44%);
+  padding: 2rem 0;
+  color: var(--body-bg);
+  & p {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .contact-us-form {
+    width: 70%;
+    margin: 0 auto;
+    .btn {
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+    & input[type="email"] {
+      border: none;
+      outline: none;
+      width: 100%;
+    }
+  }
+}
+
+footer {
+  padding: 2rem 0;
+  background-color: var(--footer-bg);
+  & a {
+    color: #ffffff;
+  }
+
+  & img {
+    filter: brightness(0) invert(1);
+  }
+
+  .flyo-footer-logo {
+    height: 50px;
+  }
+
+  & ul {
+    margin: 1rem 0;
+    & li {
+      padding: 0.25rem 0;
+    }
+    & a {
+      & img {
+        margin-right: 0.5rem;
+      }
+
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .social-media-links {
+    & img {
+      border: 1px solid #ffffff;
+      border-radius: 100%;
+      padding: 0.25rem;
+      height: 30px;
+    }
+  }
+}
+
+/* media queries */
+
+/* Medium devices (tablets, 0 and up)*/
+@media (min-width: 0px) {
+  .container {
+    max-width: 340px;
+  }
+}
+/* Medium devices (tablets, 375 and up)*/
+@media (min-width: 375px) {
+  .container {
+    max-width: 340px;
+  }
+}
+/* Medium devices (tablets, 576px and up)*/
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
