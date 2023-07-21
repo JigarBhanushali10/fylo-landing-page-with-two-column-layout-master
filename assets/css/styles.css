@@ -218,19 +218,20 @@ header .brand-logo {
 .flyo-link-container {
   display: flex;
   justify-content: center;
-  .flyo-link {
-    margin: 2rem 0;
-    padding-bottom: 0.5rem;
-    color: var(--brand-link-color);
-    border-bottom: 1px solid var(--brand-link-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .icon-arrow {
-      margin-left: 0.5rem;
-      height: 20px;
-    }
-  }
+}
+
+.flyo-link-container .flyo-link {
+  margin: 2rem 0;
+  padding-bottom: 0.5rem;
+  color: var(--brand-link-color);
+  border-bottom: 1px solid var(--brand-link-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flyo-link-container .icon-arrow {
+  margin-left: 0.5rem;
+  height: 20px;
 }
 
 .card {
@@ -241,26 +242,23 @@ header .brand-logo {
   box-shadow: 3px 3px 9px 2px rgba(0, 0, 0, 0.068);
   border-radius: var(--border-radius);
   padding: 1.5rem 1.25rem;
-
-  & .card-footer {
-    & img {
-      height: 30px;
-      margin-right: 0.5rem;
-      border-radius: 100%;
-    }
-  }
+}
+.card-footer img {
+  height: 30px;
+  margin-right: 0.5rem;
+  border-radius: 100%;
 }
 .contact-us {
   background-color: hsl(238, 22%, 44%);
   padding: 3rem 1.5rem;
   color: var(--body-bg);
-  & p {
-    text-align: center;
-    margin: 2rem 0;
-  }
+}
+.contact-us p {
+  text-align: center;
+  margin: 2rem 0;
 }
 .contact-us-form {
-  width: 70%;
+  width: 80%;
   position: relative;
   margin: 0 auto;
 }
@@ -277,43 +275,40 @@ header .brand-logo {
 footer {
   padding: 2rem 2.5rem;
   background-color: var(--footer-bg);
-  & a {
-    color: #ffffff;
-  }
-
-  & img {
-    filter: brightness(0) invert(1);
-  }
-
-  .flyo-footer-logo {
-    height: 50px;
-  }
-
-  & ul {
-    margin: 1rem 0;
-    justify-content: center;
-    & li {
-      padding: 0.25rem 0;
-    }
-    & a {
-      & img {
-        margin-right: 0.5rem;
-      }
-
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  .social-media-links {
-    & img {
-      border: 1px solid #ffffff;
-      border-radius: 100%;
-      padding: 0.25rem;
-      height: 30px;
-    }
-  }
 }
+footer a {
+  color: #ffffff;
+}
+
+footer img {
+  filter: brightness(0) invert(1);
+}
+
+footer .flyo-footer-logo {
+  height: 50px;
+}
+footer ul {
+  margin: 1rem 0;
+  justify-content: center;
+}
+footer a {
+  display: flex;
+  align-items: center;
+}
+footer a img {
+  margin-right: 0.5rem;
+}
+
+footer li {
+  padding: 0.25rem 0;
+}
+.social-media-links img {
+  border: 1px solid #ffffff;
+  border-radius: 100%;
+  padding: 0.25rem;
+  height: 30px;
+}
+
 #footerLinks {
   display: flex;
   justify-content: space-between;
@@ -326,7 +321,7 @@ footer {
 /* Medium devices (tablets, 375 and up)*/
 @media (min-width: 375px) {
   .container {
-    max-width: 315px;
+    max-width: 330px;
   }
 }
 /* Medium devices (tablets, 576px and up)*/
@@ -356,26 +351,27 @@ footer {
   .hero-section-body {
     display: flex;
     flex-direction: row-reverse;
-    & .hero-img {
-      margin: 0;
-    }
-    .hero-title {
-      font-size: 40px;
-      text-align: left;
-    }
-    .hero-details {
-      text-align: left;
-    }
   }
+  .hero-section-body .hero-img {
+    margin: 0;
+  }
+  .hero-section-body .hero-title {
+    font-size: 40px;
+    text-align: left;
+  }
+  .hero-details {
+    text-align: left;
+  }
+
   .hero-form {
     flex-direction: row;
-    .hero-email-input {
-      margin: 0 0.75rem 0 0;
-      flex-grow: 1;
-    }
-    .btn-primary {
-      flex-grow: 1;
-    }
+  }
+  .hero-form .hero-email-input {
+    margin: 0 0.75rem 0 0;
+    flex-grow: 1;
+  }
+  .hero-form .btn-primary {
+    flex-grow: 1;
   }
 
   .productive-section-body {
@@ -383,26 +379,23 @@ footer {
     flex-direction: row-reverse;
     padding: 3rem 0;
     margin: 3rem 0;
+  }
+  .productive-section-body .productive-section-detail {
+    margin-right: 1rem;
+  }
+  .productive-section-body .card {
+    margin-left: 0;
+  }
 
-    .productive-section-detail {
-      margin-right: 1rem;
-      & p {
-        /* margin-left: 0;
-        margin-right: auto; */
-      }
-
-      .card {
-        margin-left: 0;
-      }
-    }
-
-    .productive-section-title {
-      font-size: 40px;
-      text-align: left;
-    }
-    .flyo-link-container {
-      justify-content: left;
-    }
+  .productive-section-title {
+    font-size: 40px;
+    text-align: left;
+  }
+  .flyo-link-container {
+    justify-content: left;
+  }
+  .flyo-link-container .flyo-link {
+    margin: 0;
   }
 
   .contact-us-body p {
