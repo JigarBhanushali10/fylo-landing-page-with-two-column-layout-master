@@ -161,6 +161,7 @@ input[type="email"] {
 header {
   font-family: "Raleway", sans-serif;
   margin: 2rem 0;
+  padding: 2rem 0;
 }
 
 .nav-links li:not(:last-child) {
@@ -171,8 +172,8 @@ header .brand-logo {
   height: 30px;
 }
 .hero-section {
-  margin: 2rem 0;
-  padding: 2rem 0;
+  margin: 2rem 0 3rem;
+  padding: 2rem 0 3rem;
 }
 .hero-details {
   text-align: center;
@@ -341,7 +342,7 @@ footer li {
   }
   .nav-links li,
   .nav-links li:not(:last-child) {
-    padding: 0 2rem;
+    padding-left: 2.5rem;
   }
 
   .hero-form:has(.hero-email-input:invalid) ::after {
@@ -349,8 +350,10 @@ footer li {
   }
 
   .hero-section-body {
+    gap: 10rem;
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
   }
   .hero-section-body .hero-img {
     margin: 0;
@@ -429,6 +432,7 @@ footer li {
   .container {
     max-width: 960px;
   }
+
   .contact-us-details {
     padding-right: 3rem;
     margin-right: 3rem;
@@ -462,9 +466,16 @@ footer li {
 /* XX-Large devices (larger desktops, 1400px and up)*/
 @media (min-width: 1400px) {
   .container {
-    max-width: 1320px;
+    max-width: 1280px;
   }
   .card {
     width: 50%;
+  }
+
+  .hero-section-body .hero-title {
+    line-height: 60px;
+  }
+  .hero-section-body .hero-details {
+    font-size: 18px;
   }
 }
