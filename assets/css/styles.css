@@ -197,8 +197,7 @@ header .brand-logo {
 }
 
 .productive-section {
-  padding: 2rem 0;
-  /* margin: 2rem 0; */
+  padding-top: 2rem;
   background-image: url("../images/bg-curve-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -212,7 +211,7 @@ header .brand-logo {
   margin: 2rem 0;
 }
 .productive-img-container {
-  padding: 2rem 0;
+  padding: 4rem 0;
   display: flex;
   align-items: center;
 }
@@ -344,7 +343,9 @@ footer li {
   .nav-links li:not(:last-child) {
     padding-left: 2.5rem;
   }
-
+  .hero-section {
+    height: 70vh;
+  }
   .hero-form:has(.hero-email-input:invalid) ::after {
     bottom: -23px;
   }
@@ -380,8 +381,8 @@ footer li {
   .productive-section-body {
     display: flex;
     flex-direction: row-reverse;
-    padding: 3rem 0;
-    margin: 3rem 0;
+    padding-top: 3rem;
+    margin-top: 3rem;
   }
   .productive-section-body .productive-section-detail {
     margin-right: 1rem;
